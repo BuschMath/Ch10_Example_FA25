@@ -1,16 +1,20 @@
 #include <iostream>
-#include <climits>
 
 using namespace std;
 
 int main()
 {
-	cout << "Size of:\nchar: " << sizeof(char) << "\n\nshort: " << sizeof(short) << "\n\nint: ";
-	cout << sizeof(int) << "\n\nlong: " << sizeof(long) << "\n\nbool: " << sizeof(bool) << "\n\n";
+	int number = 10;
+	int* p_Number = &number;
 
-	cout << "Min/Max:\nchar min/max: " << CHAR_MIN << " " << CHAR_MAX << "\n\nshort min/max: ";
-	cout << SHRT_MIN << " " << SHRT_MAX << "\n\nint min/max: " << INT_MIN << " " << INT_MAX;
-	cout << "\n\nlong min/max: " << LONG_MIN << " " << LONG_MAX << endl;
+	cout << "Value of number: " << number << endl;
+	cout << "Address of number: " << &number << endl;
+	cout << "Value of pNumber (address of number): " << p_Number << endl;
+	cout << "Value pointed to by pNumber: " << *p_Number << endl;
+
+	char* p_char = new char;
+	*p_char = 'A';
+	cout << "Value pointed to by p_char: " << *p_char << endl;
 
 	return 0;
 }
